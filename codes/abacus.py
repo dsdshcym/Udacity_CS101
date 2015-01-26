@@ -43,6 +43,7 @@ def print_abacus(value):
        #
        ### Add you code here 
        #
+
     # 6 lines solution
     # s='|00000*****|'
     # i=100000000
@@ -50,10 +51,12 @@ def print_abacus(value):
     #     print s[:10-value/i+1]+'   '+s[10-value/i+1:]
     #     value %= i
     #     i /= 10
+
+    # 3 lines solution
     s='|00000*****|'
     for x in '0'*(10-len(str(value)))+str(value):
         print s[:10-int(x)+1]+'   '+s[10-int(x)+1:]
-    
+
 ###  TEST CASES
 print "Abacus showing 0:"
 print_abacus(0)
@@ -79,8 +82,8 @@ print_abacus(12345678)
 #>>>|0000   0*****|
 #>>>|000   00*****|
 #>>>|00   000*****|
-print "Abacus showing 999:"
-print_abacus(999)
+print "Abacus showing 1337:"
+print_abacus(1337)
 #>>>|00000*****   |
 #>>>|00000*****   |
 #>>>|00000*****   |

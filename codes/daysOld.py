@@ -62,6 +62,7 @@ def daysBetweenDates(year1, month1, day1, year2, month2, day2):
     # Your code here.
     ##
     # print year1, month1, day1, year2, month2, day2
+# 没加入判断输入是否有效
     sum = 0
     for i in range(year1, year2):
         sum += yearDays(i)
