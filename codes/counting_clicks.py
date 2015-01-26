@@ -39,15 +39,23 @@
 
 
 def record_user_click(index,keyword,url):
+    for entry in index:
+        if entry[0] == keyword:
+            for li in entry[1]:
+                if li[0] == url:
+                    li[1] += 1
 
 
 def add_to_index(index, keyword, url):
     for entry in index:
         if entry[0] == keyword:
-            entry[1].append(url)
+            for li in entry[1]:
+                if li[0] == url:
+                    return
+            entry[1].append([url, 0])
             return
     # not found, add new keyword to index
-    index.append([keyword, [url]])
+    index.append([ keyword, [[url, 0]] ])
 
 
 def get_page(url):
